@@ -1,0 +1,64 @@
+\PassOptionsToPackage{capitalise}{cleveref}
+\PassOptionsToPackage{svgnames,dvipsnames}{xcolor}
+\documentclass{./style/unicamthesis}
+\input{./macros/packages}
+\usepackage{float} % Put this in the preamble
+
+\usepackage{./style/listings-solidity-ocaml}
+
+\title{A thesis template for the University of Camerino}
+\author{John Doe}
+\coursename{Blockchain And Digital Ledger Technology}
+\curriculumname{Methodology}
+\cyclenumber{XXXVIII}
+\supervisorname{Dr. John Doe}
+\cosupervisorname{Prof. Jane Doe}
+\coordinatorname{Prof. John Doe}
+\dateofaward{XXX 2026}
+
+% Logos
+
+\begin{document}
+
+\maketitle
+\pagenumbering{roman}
+\printcolophon
+
+\begin{declaration}
+\input{declaration}
+\end{declaration}
+
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+\newpage
+
+\input{acknowledgements}
+\newpage
+\tableofcontents
+
+\pagenumbering{arabic}
+\cleardoublepage
+\thispagestyle{empty}
+%\part{Prologue}
+\chapter{Introduction}\label{chapter:intro}
+\input{./chapters/intro/intro}
+\newpage
+
+%\part{Main Part}
+\chapter{Background}\label{chapter:litreview}
+\input{./chapters/stateofart/state-of-art}
+
+\chapter{A chapter}\label{chapter:a_chapter}
+\input{./chapters/achapter/achapter}
+
+\chapter{Conclusions \& Future works}\label{chapter:conclusions}
+\input{./chapters/conclusion/conclusion}
+
+\appendix
+\chapter{Appendix}\label{chapter:appendix}
+\input{appendix}~
+
+\bibliographystyle{plain}
+\bibliography{bib}
+\end{document}
